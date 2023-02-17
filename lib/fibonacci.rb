@@ -1,5 +1,5 @@
 def fibs(num)
-  return 'Not valid' if num.negative?
+  return 'Not valid!' if num.negative?
 
   arr = []
   i = 0
@@ -8,4 +8,12 @@ def fibs(num)
     i += 1
   end
   arr
+end
+
+def fibs_rec(num)
+  return 'Not valid!' if num.negative?
+  return 0 if num.zero?
+  return 1 if num == 1
+
+  fibs_rec(num - 1) + fibs_rec(num - 2)
 end
